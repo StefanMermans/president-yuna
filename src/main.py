@@ -75,4 +75,4 @@ class Yuna(discord.Client):
 
 
 client = Yuna()
-client.run('Njc3NjAzMTI2NjM0NzQxODAx.XkWqDg.FYkHFWR5Yr7vg6XK8UCTcXO2U7M')
+client.run('')
