@@ -11,14 +11,14 @@ jobs:
     - uses: actions/checkout@v2
       # No tests, just deploy
     - name: SSH Commands
-      uses: appleboy/ssh-action@v0.0.2
+      uses: appleboy/ssh-action@v0.0.7
       with:
         host: ${{ secrets.REMOTE_HOST }}
         key: ${{ secrets.PRIVATE_KEY }}
         username: stefan
         script: cd ~/president-yuna && git pull
     - name: SSH Commands
-      uses: appleboy/ssh-action@v0.0.2
+      uses: appleboy/ssh-action@v0.0.7
       with:
         host: ${{ secrets.REMOTE_HOST }}
         key: ${{ secrets.PRIVATE_KEY }}
