@@ -14,12 +14,14 @@ jobs:
       uses: appleboy/ssh-action@v0.0.2
       with:
         host: ${{ secrets.REMOTE_HOST }}
+        key: ${{ secrets.PRIVATE_KEY }}
         username: stefan
         script: cd ~/president-yuna && git pull
     - name: SSH Commands
       uses: appleboy/ssh-action@v0.0.2
       with:
         host: ${{ secrets.REMOTE_HOST }}
+        key: ${{ secrets.PRIVATE_KEY }}
         username: stefan
         script: ~/president-yuna/venv/bin/pip3 install -r ~/president-yuna/requirements.txt
       
