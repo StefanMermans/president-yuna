@@ -10,12 +10,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       # No tests, just deploy
-    - name: ssh deploy
-      uses: easingthemes/ssh-deploy@v2.0.8
+    - name: SSH Commands
+      uses: appleboy/ssh-action@v0.0.2
       with:
-        SSH_PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-        REMOTE_USER: stefan 
-        REMOTE_PORT: 22
-        SOURCE: .
-        TARGET: /home/stefan/yuna-bot
+        host: ${{ secrets.REMOTE_HOST }}
+        username: stefan
+        script: cd ~/president-yuna && git pull
+    - name: SSH Commands
+      uses: appleboy/ssh-action@v0.0.2
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: stefan
+        script: ~/president-yuna/venv/bin/pip3 install -r ~/president-yuna/requirements.txt
+      
