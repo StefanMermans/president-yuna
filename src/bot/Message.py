@@ -16,19 +16,19 @@ def get_from_list(text_list: List[str]) -> str:
 
 def get_early_text(remaining_time):
     early_texts = [
-        "There's guild war today, make sure to participate ok? There's {} left!",
-        "Guild war has started, there's {} left, make sure to use your attacks!",
-        "Let's win this guild war everyone! There's still {} left.",
-        "Make sure to use all your attacks for the current guild war! we still have {}",
+        "@everyone There's guild war today, make sure to participate ok? There's {} left!",
+        "@everyone Guild war has started, there's {} left, make sure to use your attacks!",
+        "@everyone Let's win this guild war everyone! There's still {} left.",
+        "@everyone Make sure to use all your attacks for the current guild war! we still have {}",
     ]
     return get_from_list(early_texts).format(str(remaining_time))
 
 
 def get_late_text(remaining_time):
     late_texts = [
-        "Make sure to do your attacks in time before guild war ends in {}!",
-        "There's still {} left in the guild war, make sure to attack before it ends!",
-        "Keep fighting, we still have {} left for the guild war!",
+        "@everyone Make sure to do your attacks in time before guild war ends in {}!",
+        "@everyone There's still {} left in the guild war, make sure to attack before it ends!",
+        "@everyone Keep fighting, we still have {} left for the guild war!",
     ]
     return get_from_list(late_texts).format(str(remaining_time))
 
@@ -52,10 +52,10 @@ def is_patch_day():
 
 def get_patch_text():
     patch_texts = [
-        "There might be maintenance today, be sure to check with YufineBot for news.",
-        "Today is patch day, check YufineBot's news for details.",
-        "Make sure you use your guild war attacks before maintenance, check the news to make sure you have enough time!",
-        "YufineBot will have news on any maintenance today, Please attack before maintenance starts!"
+        "@everyone There might be maintenance today, be sure to check with YufineBot for news.",
+        "@everyone Today is patch day, check YufineBot's news for details.",
+        "@everyone Make sure you use your guild war attacks before maintenance, check the news to make sure you have enough time!",
+        "@everyone YufineBot will have news on any maintenance today, Please attack before maintenance starts!"
     ]
     return get_from_list(patch_texts)
 
