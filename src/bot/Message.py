@@ -28,7 +28,7 @@ def get_late_text(remaining_time):
     late_texts = [
         "Make sure to do your attacks in time before guild war ends in {}!",
         "There's still {} left in the guild war, make sure to attack before it ends!",
-        "Keep fighting, we still have {} left in the guild war!",
+        "Keep fighting, we still have {} left for the guild war!",
     ]
     return get_from_list(late_texts).format(str(remaining_time))
 

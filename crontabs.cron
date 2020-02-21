@@ -1,2 +1,11 @@
-0 11 * * 1 python3
+# Monday-tuesday war
+0 15 * * 1 /home/stefan/president-yuna/start-yuna.sh early
+0 5 * * 2 /home/stefan/president-yuna/start-yuna.sh late
 
+# Wednesday-thursday war
+0 15 * * 3 /home/stefan/president-yuna/start-yuna.sh early
+0 5 * * 4 /home/stefan/president-yuna/start-yuna.sh late
+
+# Friday-saturday war
+0 15 * * 5 /home/stefan/president-yuna/start-yuna.sh early
+0 5 * * 6 /home/stefan/president-yuna/start-yuna.sh late
