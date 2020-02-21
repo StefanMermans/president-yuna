@@ -4,8 +4,10 @@ from bot import Message
 
 
 async def on_ready(client: Yuna):
-    message = Message.get_message()
-    await client.write(message)
+    messages = Message.get_message()
+
+    for message in messages:
+        await client.write(message)
     await client.stop()
 
 
